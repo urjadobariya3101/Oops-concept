@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor</title>
+</head>
+<body>
+    
+
+    <script>
+
+        /*object using this keyword*/
+        function person(fname,lname,age) {
+            this.firstname = fname;
+            this.lastname = lname;
+            this.age = age;
+        }   
+
+        /*Added property*/
+        person.eyeColour = "Brown";
+
+        /* new keyword*/
+        const Father = new person("Kishorbhai","Dobariya",47);
+
+        /*Access the data*/
+       console.log(Father.firstname);
+       console.log(person.eyeColour);
+       console.log("My name is " +Father.firstname + " " + Father.lastname+".");
+
+
+       /* Accessor */
+
+       let person1 = {
+        name : "Urja",
+        age : 19,
+        language : function set(lan){
+            this.language=lang;
+        }
+       }
+
+       person.language = "English";
+       console.log(person.language);
+
+
+
+
+    </script>
+</body>
+</html>
